@@ -1,17 +1,21 @@
 import { Component } from '@angular/core'
 
 @Component({
-    selector : 'mattest';
-    template : `<md-menu #appMenu="mdMenu">
-  <button md-menu-item> Settings </button>
-  <button md-menu-item> Help </button>
-</md-menu>
+    selector : 'mattest',
+    template : `<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav class="example-sidenav">
+    Jolly good!
+  </md-sidenav>
 
-<button md-icon-button [mdMenuTriggerFor]="appMenu">
-   <md-icon>more_vert</md-icon>
-</button>`
+  <div class="example-sidenav-content">
+    <button md-button (click)="sidenav.open()">
+      Open sidenav
+    </button>
+  </div>
+
+</md-sidenav-container>`,
 })
 
 export class MattestComponent{
-    
+
 }
